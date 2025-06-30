@@ -1,0 +1,16 @@
+modules = ["python-3.12"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 44403840
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python rev.py"
